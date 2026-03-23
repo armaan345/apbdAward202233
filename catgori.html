@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Gramentheme">
+        <meta name="description" content="apbbd award 2026 HTML Template">
+        <!-- ======== Page title ============ -->
+        <title>ABPD Award 2026</title>
+        <!--<< Favcion >>-->
+        <link rel="shortcut icon" href="assets/img/po.png">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <!--<< Icomon.css >>-->
+        <!-- <link rel="stylesheet" href="assets/css/icomon.css"> -->
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+ <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #030303; font-family: 'Plus Jakarta Sans', sans-serif; color: #ededed; overflow-x: hidden; }
+    .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 70% 20%, rgba(255, 200, 50, 0.08), #000000 80%); pointer-events: none; z-index: 0; }
+    .main-container { position: relative; z-index: 2; max-width: 1440px; margin: 0 auto; padding: 30px 28px 70px; }
+    .hero-category { text-align: center; margin-bottom: 55px; }
+    .hero-category .chip { display: inline-block; background: rgba(255, 200, 70, 0.12); backdrop-filter: blur(6px); border: 0.6px solid rgba(255, 200, 70, 0.5); padding: 6px 20px; border-radius: 60px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.8px; color: #ffdf80; margin-bottom: 20px; }
+    .hero-category h1 { font-size: clamp(2.8rem, 8vw, 5.2rem); font-weight: 800; background: linear-gradient(145deg, #FFFFFF, #FFDF8C, #F5BC2E); background-clip: text; -webkit-background-clip: text; color: transparent; margin-bottom: 12px; }
+    .hero-sub { font-size: 1.05rem; font-weight: 400; color: #b9b9c3; border-top: 1px solid rgba(255, 200, 70, 0.3); display: inline-block; padding-top: 14px; }
+    .grid-awards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+    .award-card { background: rgba(14, 14, 20, 0.85); backdrop-filter: blur(3px); border-radius: 32px; overflow: hidden; transition: all 0.4s; border: 1px solid rgba(255, 215, 0, 0.22); box-shadow: 0 20px 35px -12px rgba(0,0,0,0.6); display: flex; flex-direction: column; }
+    .award-card:hover { transform: translateY(-10px); border-color: rgba(255, 210, 60, 0.9); background: rgba(22, 22, 30, 0.95); }
+    .card-media { width: 100%; height: 290px; overflow: hidden; position: relative; }
+    .card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.65s; }
+    .award-card:hover .card-media img { transform: scale(1.06); }
+    .card-media::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); pointer-events: none; }
+    .card-body { padding: 22px 22px 28px; text-align: center; }
+    .icon-cat { font-size: 2rem; color: #f5c542; margin-bottom: 8px; }
+    .card-body h3 { font-size: 1.45rem; font-weight: 700; margin: 10px 0 8px; background: linear-gradient(125deg, #fff, #ffe0a3); background-clip: text; -webkit-background-clip: text; color: transparent; }
+    .card-body p { font-size: 0.86rem; line-height: 1.45; color: #c9c9d4; margin: 10px 0 22px; }
+    .nominate-btn { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(105deg, #e0b13a, #ffdc73); color: #0b0b0b; border: none; padding: 10px 28px; border-radius: 50px; font-weight: 800; font-size: 0.82rem; text-transform: uppercase; text-decoration: none; transition: all 0.25s; cursor: pointer; }
+    .nominate-btn:hover { background: linear-gradient(105deg, #ffcf54, #ffea9e); transform: scale(1.02); }
+    .accent-line { width: 52px; height: 2px; background: linear-gradient(90deg, #f5bc2e, #b57a1a); margin: 18px auto 0; border-radius: 4px; }
+    .popup { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(8px); justify-content: center; align-items: center; z-index: 9999; }
+    .popup-content { background: #111217; padding: 30px 28px; border-radius: 32px; width: 450px; max-width: 90%; max-height: 85vh; overflow-y: auto; border: 1px solid rgba(255, 200, 70, 0.4); position: relative; }
+    .close-btn { position: absolute; right: 22px; top: 18px; font-size: 28px; cursor: pointer; color: #ffdf80; }
+    .popup-content h2 { font-size: 1.8rem; margin-bottom: 20px; color: #ffdf80; text-align: center; }
+    .popup-content input, .popup-content textarea { width: 100%; padding: 12px 15px; margin-bottom: 16px; background: #1e1e2a; border: 1px solid #333; border-radius: 40px; color: white; font-family: inherit; outline: none; }
+    .popup-content input:focus, .popup-content textarea:focus { border-color: #f5bc2e; }
+    .popup-content textarea { border-radius: 24px; resize: vertical; min-height: 80px; }
+    .popup-content button { background: linear-gradient(105deg, #e0b13a, #ffdc73); border: none; padding: 12px; width: 100%; border-radius: 40px; font-weight: bold; font-size: 1rem; cursor: pointer; margin-top: 8px; transition: 0.2s; }
+    .popup-content button:hover:not(:disabled) { transform: scale(0.98); }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+   
+  
+    .sidebar__toggle { margin-left: 20px; font-size: 24px; cursor: pointer; color: #ffdf80; }
+    .offcanvas__info { position: fixed; top: 0; right: -400px; width: 380px; height: 100%; background: #0a0a10; z-index: 99999; transition: 0.4s; padding: 30px 24px; box-shadow: -5px 0 30px rgba(0,0,0,0.5); }
+    .offcanvas__info.active { right: 0; }
+    .offcanvas__overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; visibility: hidden; opacity: 0; transition: 0.3s; }
+    .offcanvas__overlay.active { visibility: visible; opacity: 1; }
+    .offcanvas__close button { background: none; border: none; font-size: 28px; color: #ffdf80; cursor: pointer; }
+    footer { background: #050507; padding: 60px 0 20px; margin-top: 70px; border-top: 1px solid rgba(255,200,70,0.2); }
+    .gt-footer-widget-wrapper { display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; }
+    .gt-footer-widget-items { flex: 1; min-width: 200px; }
+    .gt-list-area { list-style: none; }
+    .gt-list-area li a { color: #ccc; text-decoration: none; line-height: 2; }
+    .footer-bottom { text-align: center; padding-top: 30px; margin-top: 40px; border-top: 1px solid #222; }
+    @media (max-width: 992px) { .main-menu { display: none; } }
+    @media (max-width: 700px) { .main-container { padding: 20px 16px 50px; } }
+    .success-msg, .error-msg { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); padding: 12px 24px; border-radius: 50px; font-weight: bold; z-index: 10000; animation: slideDown 0.3s ease; }
+    .success-msg { background: #10b981; color: white; }
+    .error-msg { background: #ef4444; color: white; }
+    @keyframes slideDown { from { top: -50px; opacity: 0; } to { top: 20px; opacity: 1; } }
+    .photo-note { background: rgba(245, 188, 46, 0.1); border-left: 3px solid #f5bc2e; padding: 10px 15px; margin-top: 15px; border-radius: 8px; font-size: 0.8rem; color: #ffdf80; text-align: center; }
+  </style>
+<body>
+ <!-- GT Back To Top Start -->
+        <button id="gt-back-top" class="gt-back-to-top show">
+            <i class="fa-regular fa-arrow-up"></i>
+        </button>
+
+        <!-- GT MouseCursor Start -->
+        <div class="mouseCursor cursor-outer"></div>
+        <div class="mouseCursor cursor-inner"></div>
+        
+        <!-- Offcanvas Area Start -->
+        <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="index.html">
+                                    <img src="assets/img/op.png" alt="logo-img" style="width: 120px;">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button>
+                                <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text d-none d-xl-block">
+                            Established in 1994 in the United Kingdom, ABPD is the UK’s first mixed Bhangra, Gidha, and Modern Dance group. For over 32 years, we have been promoting Punjabi culture across global platforms.
+                        </p>
+                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="offcanvas__contact">
+                            <h4>Contact Info</h4>
+                            <ul>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="#">Location: London, United Kingdom</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="mailto:info@example.com"><span class="mailto:apbdaward@gmail.com
+">apbdaward@gmail.com
+</span></a>
+                                    </div>
+                                </li>
+                            
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="far fa-phone"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="tel:+447956300367">+44 7956 300367</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="social-icon d-flex align-items-center">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas__overlay"></div>
+
+        <!-- Header Section Start -->
+<header id="header-sticky" class="header-1 header-2 header-3 train-border-bottom">
+    <div class="container-fluid">
+        <div class="mega-menu-wrapper">
+            <div class="header-main">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" class="header-logo">
+                        <img src="assets/img/po.png" alt="APBD Award Logo" style="width: 110px;">
+                    </a>
+                </div>
+
+                <!-- Menu -->
+                <div class="header-right d-flex justify-content-end align-items-center mt-0">
+                    <div class="mean__menu-wrapper">
+                        <div class="main-menu">
+                            <nav id="mobile-menu">
+                                <ul>
+
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="about.html">About </a>
+                                    </li>
+
+                                   
+
+                                       <li>
+                                        <a href="pricing.html">price plan </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="gallery.html">Event Gallery</a>
+                                    </li>
+                                      <li>
+                                        <a href="aply.htm">Buy your ticket </a>
+                                    </li>
+
+                             
+
+                                    <li>
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Header Button -->
+ <!-- Header Button -->
+<div class="header-button">
+    <a href="https://api.whatsapp.com/send?phone=+447956300367&text=Hello%20Team,%20I%20want%20to%20apply%20for%20the%20Applet%20Award!" 
+       class="gt-theme-btn award-btn" target="_blank">
+       Drop a message
+    </a>
+</div>
+        <!-- Mobile Menu -->
+                    <div class="header__hamburger d-xl-block my-auto">
+                        <div class="sidebar__toggle">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="main-container">
+  <div class="hero-category">
+    <div class="chip"><i class="fas fa-medal"></i> 2026 NOMINATIONS</div>
+    <h1>Awards Categories</h1>
+    <div class="hero-sub"><i class="fas fa-crown"></i> Honoring excellence across media, music & folk traditions</div>
+  </div>
+  <div class="grid-awards" id="awardsGrid"></div>
+</div>
+
+<div id="popupForm" class="popup">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h2><i class="fas fa-trophy"></i> Nominate Now</h2>
+    <form id="nominationForm">
+      <input type="text" id="category" name="category" placeholder="Award Category" readonly style="background:#2a2a35; font-weight:500;">
+      <input type="text" name="fullname" placeholder="Full Name" required>
+      <input type="text" name="surname" placeholder="Surname" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Contact Number" required>
+      <textarea name="message" placeholder="Why should they win? (Optional)"></textarea>
+      <div class="photo-note">
+        <i class="fas fa-camera"></i> Please send your photo via email or attach your photo in the email.
+      </div>
+      <button type="submit" id="submitBtn">Submit Nomination <i class="fas fa-paper-plane"></i></button>
+    </form>
+  </div>
+</div>
+
+            <!-- GT Footer Section Start -->
+<footer class="gt-footer-section section-bg">
+    <div class="container">
+        <div class="gt-footer-widget-wrapper">
+            <div class="row justify-content-between">
+
+                <!-- Logo + About -->
+                <div class="col-xl-4 col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="gt-footer-widget-items">
+                        <div class="gt-widget-head">
+                            <a href="index.html" class="gt-footer-logo">
+                                <img src="assets/img/po.png" alt="ABPD Showbiz Awards" style="width: 140px;" >
+                            </a>
+                        </div>
+
+                        <div class="gt-footer-content">
+                            <p>
+                                ABPD Showbiz Awards 2026 is a prestigious platform celebrating 
+                                talent, creativity, and excellence in entertainment, media, 
+                                and business industries.
+                            </p>
+
+                           <div class="gt-social-icon d-flex align-items-center">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+                        </div>
+                    </div>
+                </div>
+
+              <!-- Quick Links -->
+<div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
+    <div class="gt-footer-widget-items">
+
+        <div class="gt-widget-head">
+            <h5>Quick Links</h5>
+        </div>
+
+        <ul class="gt-list-area">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Event Gallery</a></li>
+            <li><a href="nomination.html">Apply Award</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </div>
+</div>
+
+                <!-- Information -->
+                <div class="col-xl-2 ps-lg-3 col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".6s">
+                    <div class="gt-footer-widget-items">
+                        <div class="gt-widget-head">
+                            <h5>Information</h5>
+                        </div>
+
+                        <ul class="gt-list-area">
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Sponsorship</a></li>
+                            <li><a href="#">Media Partners</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact + Map -->
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".8s">
+                    <div class="gt-footer-widget-items">
+                        <div class="gt-widget-head">
+                            <h5>Contact Information</h5>
+                        </div>
+
+                        <div class="gt-footer-content">
+                            <p>Email: info@abpdawards.com</p>
+                            <p>Phone: +44 7956 300367</p>
+                            <p>Location: London, United Kingdom</p>
+                        </div>
+
+                        <!-- UK Map -->
+                        <div class="footer-map mt-3">
+                            <iframe 
+                                src="https://www.google.com/maps?q=London,UK&output=embed"
+                                width="100%" 
+                                height="200" 
+                                style="border:0;" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom wow fadeInUp" data-wow-delay=".3s">
+            <div class="footer-wrapper">
+                <p>© 2026 ABPD Showbiz Awards. All Rights Reserved.</p>
+
+                <ul class="gt-footer-list">
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+(function() {
+  // Categories Data
+  const categoriesData = [
+    { name: "Best Radio Presenter", icon: "fas fa-microphone-alt", desc: "Voice mastery, audience connection and broadcast excellence.", img: "catgories/_ (7).jpeg" },
+    { name: "Best TV Anchor", icon: "fas fa-tv", desc: "Charisma, storytelling and impactful on-screen presence.", img: "catgories/ABC News evolves with anchor Muir amid stiff competition.jpeg" },
+    { name: "Best Newcomer Male", icon: "fas fa-star", desc: "Fresh talent, promising future and breakthrough performance.", img: "catgories/Dazzling man.jpeg" },
+    { name: "Best Newcomer Female", icon: "fas fa-sparkle", desc: "Rising star with exceptional artistry and potential.", img: "catgories/_ (8).jpeg" },
+    { name: "Best Song Writer", icon: "fas fa-feather-alt", desc: "Lyrical brilliance, poetic storytelling.", img: "catgories/Step By Step Guide_ How To Decode Your Favorite_.avif" },
+    { name: "Best Music Studio", icon: "fas fa-headphones", desc: "Production quality, innovation and sonic excellence.", img: "catgories/【ボイトレ】効果を最大化！レコーディングレッスンを活用した新しい練習法.jpeg" },
+    { name: "Best Singer Male - Punjabi", icon: "fas fa-dharmachakra", desc: "Exceptional Punjabi vocal mastery.", img: "catgories/sidhu moose wala.jpeg" },
+    { name: "Best Singer Male - Bollywood", icon: "fas fa-microphone", desc: "Powerful playback singing excellence.", img: "catgories/Arijit Singh.jpeg" },
+    { name: "Best Singer Female Punjabi", icon: "fas fa-female", desc: "Finest female voice shaping Punjabi music.", img: "catgories/_ (9).jpeg" },
+    { name: "Best Female Singer - Bollywood", icon: "fas fa-sunglasses", desc: "Iconic Bollywood female vocals.", img: "catgories/Warm Photography - Lightroom Presets.jpeg" },
+    { name: "Best Bhangra Dancer Male", icon: "fas fa-bolt", desc: "Energetic moves, rhythm mastery.", img: "catgories/_ (10).jpeg" },
+    { name: "Best Bhangra Dancer Female", icon: "fas fa-fist-raised", desc: "Grace, power and authentic Bhangra.", img: "catgories/91810fb337084306352418eef498f735.jpg" },
+    { name: "Best Gidha Dancer", icon: "fas fa-hands-clapping", desc: "Traditional elegance, folk vibrancy.", img: "catgories/images.jpeg" },
+    { name: "Best Dhol Player", icon: "fas fa-drum", desc: "Master percussionist, infectious beats.", img: "catgories/e95b993cd97af111d8a3c74c1141c2ea.jpg" },
+    { name: "Best Chimta Player", icon: "fas fa-hand-peace", desc: "Celebrating folk rhythm & chimta virtuosity.", img: "catgories/images (1).jpeg" },
+    { name: "Best Song", icon: "fas fa-crown", desc: "Most impactful, culturally resonant track.", img: "catgories/Land Bennington.jpeg" },
+    { name: "Lifetime Achievement Award", icon: "fas fa-gem", desc: "Legendary contribution, timeless influence.", img: "catgories/😍🏆.jpeg" },
+    { name: "Special Contribution in Music Industry", icon: "fas fa-chart-line", desc: "Visionaries & industry shapers.", img: "catgories/_ (13).jpeg" }
+  ];
+
+  const gridContainer = document.getElementById('awardsGrid');
+  if (gridContainer) {
+    gridContainer.innerHTML = '';
+    categoriesData.forEach(cat => {
+      const card = document.createElement('div');
+      card.className = 'award-card';
+      card.innerHTML = `
+        <div class="card-media"><img src="${cat.img}" alt="${cat.name}" onerror="this.src='https://placehold.co/600x400/222/f5bc2e?text=${encodeURIComponent(cat.name)}'"></div>
+        <div class="card-body">
+          <div class="icon-cat"><i class="${cat.icon}"></i></div>
+          <h3>${cat.name}</h3>
+          <p>${cat.desc}</p>
+          <a href="#" class="nominate-btn" data-category="${cat.name}">click now <i class="fas fa-chevron-right"></i></a>
+          <div class="accent-line"></div>
+        </div>
+      `;
+      gridContainer.appendChild(card);
+    });
+  }
+
+  const popup = document.getElementById('popupForm');
+  const categoryField = document.getElementById('category');
+  const closeBtn = document.querySelector('.close-btn');
+  const nomForm = document.getElementById('nominationForm');
+  const submitBtn = document.getElementById('submitBtn');
+
+  function openPopup(categoryName) {
+    categoryField.value = categoryName;
+    popup.style.display = 'flex';
+  }
+
+  document.addEventListener('click', function(e) {
+    if (e.target.classList && e.target.classList.contains('nominate-btn')) {
+      e.preventDefault();
+      const cat = e.target.getAttribute('data-category');
+      if (cat) openPopup(cat);
+    }
+  });
+
+  if (closeBtn) closeBtn.onclick = () => popup.style.display = 'none';
+  window.onclick = (e) => { if (e.target === popup) popup.style.display = 'none'; };
+
+  function showNotification(message, isSuccess = true) {
+    const notification = document.createElement('div');
+    notification.className = isSuccess ? 'success-msg' : 'error-msg';
+    notification.innerHTML = message;
+    document.body.appendChild(notification);
+    setTimeout(() => notification.remove(), 5000);
+  }
+
+  // Form submission - opens Gmail with all details including photo request
+  document.getElementById("nominationForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    const category = document.getElementById("category").value;
+    const fullname = this.fullname.value;
+    const surname = this.surname.value;
+    const email = this.email.value;
+    const phone = this.phone.value;
+    const message = this.message.value;
+
+    if (!fullname || !surname || !email || !phone) {
+      showNotification('❌ Please fill all required fields!', false);
+      return;
+    }
+
+    if (!category) {
+      showNotification('❌ Please select a category!', false);
+      return;
+    }
+
+    const to = "apbdaward@gmail.com";
+    const subject = `ABPD Award Nomination - ${category}`;
+
+    // Email body with photo request message
+    const body = `
+🏆 ABPD AWARD NOMINATION 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Category: ${category}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOMINEE DETAILS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Full Name: ${fullname} ${surname}
+Email: ${email}
+Phone: ${phone}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MESSAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${message || "No additional message"}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📸 IMPORTANT: Please send your photo via email or attach your photo in this email.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Submitted via ABPD Awards Website
+Date: ${new Date().toLocaleString()}
+
+Thank you for your nomination!
+    `;
+
+    // Open Gmail with pre-filled data
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(gmailUrl, "_blank");
+    
+    showNotification(`✅ Nomination prepared! Gmail will open. Please attach your photo and click SEND.`, true);
+    
+    setTimeout(() => {
+      popup.style.display = 'none';
+      nomForm.reset();
+      categoryField.value = '';
+    }, 1500);
+  });
+
+  // Back to top
+  const backBtn = document.getElementById('gt-back-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) backBtn.style.display = 'flex';
+    else backBtn.style.display = 'none';
+  });
+  backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  
+  // Offcanvas toggle
+  const sidebarToggle = document.querySelector('.sidebar__toggle');
+  const offcanvas = document.querySelector('.offcanvas__info');
+  const overlay = document.querySelector('.offcanvas__overlay');
+  const closeCanvas = document.querySelector('.offcanvas__close button');
+  if (sidebarToggle) sidebarToggle.addEventListener('click', () => { offcanvas.classList.add('active'); overlay.classList.add('active'); });
+  const closeOffcanvas = () => { offcanvas.classList.remove('active'); overlay.classList.remove('active'); };
+  if (closeCanvas) closeCanvas.addEventListener('click', closeOffcanvas);
+  if (overlay) overlay.addEventListener('click', closeOffcanvas);
+})();
+</script>
+   
+        <!--<< All JS Plugins >>-->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <!--<< Viewport Js >>-->
+        <script src="assets/js/viewport.jquery.js"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="assets/js/jquery.waypoints.js"></script>
+        <!--<< Counterup Js >>-->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!--<< Swiper Slider Js >>-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!--<< MeanMenu Js >>-->
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        
+        <!--<< Gsap Animation Js >>-->
+        <script src="assets/js/gsap.js"></script>
+        <script src="assets/js/gsap-scroll-to-plugin.js"></script>
+        <script src="assets/js/gsap-scroll-smoother.js"></script>
+        <script src="assets/js/gsap-scroll-trigger.js"></script>
+        <!--<< SplitText Js >>-->
+        <script src="assets/js/SplitText.min.js"></script>
+        <!--<< splitType Js >>-->
+        <script src="assets/js/splitType.js"></script>
+        <!--<< script-gsap Js >>-->
+        <script src="assets/js/script-gsap.js"></script>
+        
+        <!--<< Wow Animation Js >>-->
+        <script src="assets/js/wow.min.js"></script>
+        <!--<< Main.js >>-->
+        <script src="assets/js/main.js"></script>
+</body>
+</html>
