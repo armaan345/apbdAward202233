@@ -171,68 +171,68 @@
             </div>
         </div>
     </div>
-</header>
-    <section class="abpd-ticket-section">
-    <div class="container-fluid">
+</header><section class="abpd-ticket-section">
+  <div class="container-fluid">
 
-        <!-- Title -->
-        <div class="ticket-title text-center">
-            <span>ABPD Awards 2026</span>
-            <h2>Book Your Tickets</h2>
-            <p>Fill the form and send your booking directly on WhatsApp.</p>
-        </div>
-
-        <!-- Form -->
-        <div class="ticket-form-box">
-            <form id="ticketForm">
-
-                <div class="row g-3">
-
-                    <div class="col-md-6">
-                        <input type="text" id="name" placeholder="Full Name" required>
-                    </div>
-
-                    <div class="col-md-6">
-                        <input type="email" id="email" placeholder="Email Address" required>
-                    </div>
-
-                    <div class="col-md-6">
-                        <input type="tel" id="phone" placeholder="Phone Number" required>
-                    </div>
-
-                    <div class="col-md-6">
-                        <select id="ticket">
-                            <option value="">Select Ticket Type</option>
-                            <option>General Ticket</option>
-                            <option>VIP Ticket</option>
-                            <option>VVIP Ticket</option>
-                        </select>
-                    </div>
-
-                    <div class="col-md-6">
-                        <input type="number" id="quantity" placeholder="Number of Tickets" required>
-                    </div>
-
-                    <div class="col-md-6">
-                        <input type="text" value="9 May 2026" readonly>
-                    </div>
-
-                    <div class="col-md-12">
-                        <textarea id="message" placeholder="Any message (optional)"></textarea>
-                    </div>
-
-                    <div class="col-md-12 text-center">
-                        <button type="submit" class="ticket-btn">
-                            Book on WhatsApp 🎟️
-                        </button>
-                    </div>
-
-                </div>
-
-            </form>
-        </div>
-
+    <!-- Title -->
+    <div class="ticket-title text-center">
+      <span>ABPD Awards 2026</span>
+      <h2>Book Your Tickets</h2>
+      <p>Fill the form and send your booking directly on WhatsApp.</p>
     </div>
+
+    <!-- Form -->
+    <div class="ticket-form-box">
+      <form id="ticketForm">
+
+        <div class="row g-3">
+
+          <div class="col-md-6">
+            <input type="text" id="name" placeholder="Full Name" required>
+          </div>
+
+          <div class="col-md-6">
+            <input type="email" id="email" placeholder="Email Address" required>
+          </div>
+
+          <div class="col-md-6">
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+          </div>
+
+          <div class="col-md-6">
+            <!-- ✅ Price with Ticket -->
+            <select id="ticket" required>
+              <option value="">Select Ticket Type</option>
+              <option value="General Ticket - £50">General Ticket - £50</option>
+              <option value="VIP Ticket - £60">VIP Ticket - £60</option>
+              <option value="VVIP Ticket - £70">VVIP Ticket - £70</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <input type="number" id="quantity" placeholder="Number of Tickets" required>
+          </div>
+
+          <div class="col-md-6">
+            <input type="text" value="9 May 2026" readonly>
+          </div>
+
+          <div class="col-md-12">
+            <textarea id="message" placeholder="Any message (optional)"></textarea>
+          </div>
+
+          <div class="col-md-12 text-center">
+            <button type="submit" class="ticket-btn">
+              Book on WhatsApp 🎟️
+            </button>
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+
+  </div>
 </section>
 <style>
     /* Full Section */
