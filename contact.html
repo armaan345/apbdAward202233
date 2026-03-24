@@ -228,7 +228,7 @@
                         <h4>We're Here to Help!</h4>
                         <p>Your email address will not be published. Required fields are marked *</p>
 
-                        <form action="contact.php" id="contact-form" method="POST">
+                        <form action="contact.php" id="contact-form" method="POST"onsubmit="sendToWhatsApp(event)">
                             <div class="row g-4">
 
                                 <!-- Name -->
@@ -601,4 +601,25 @@ text-shadow:0 0 10px rgba(255,215,0,0.7);
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
     </body>
-</html>
+</html><script>
+function sendToWhatsApp(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    let phoneNumber = "+447956300367"; // apna WhatsApp number
+
+    let whatsappMessage =
+`📝 *New Contact Form Enquiry* 
+
+👤 Name: ${name}
+📧 Email: ${email}
+💬 Message: ${message}`;
+
+    let url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(whatsappMessage);
+
+    window.open(url, "_blank");
+}
+</script>

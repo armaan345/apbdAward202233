@@ -1691,3 +1691,18 @@ background:#1ebe5d;
     color: #000;
 }</style>
             
+<audio id="bg-music" autoplay loop>
+  <source src="Dhurandhar (Lyrics) - Title Track  Shashwat, Hanumankind, Jasmine, Aditya  Ranveer Singh.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById("bg-music");
+
+  // Volume slow کر دیا (0.0 to 1.0)
+  music.volume = 0.2;
+
+  // Browser block issue handle
+  document.addEventListener("click", function () {
+    music.play();
+  }, { once: true });
+</script>
